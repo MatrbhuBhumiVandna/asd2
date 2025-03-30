@@ -275,6 +275,7 @@ p {
                 if (i === fileUpload.files.length - 1) {
                     hideModal(uploadModal);
                     renderAll();
+                    switchFile(fileId);
                 }
             };
             
@@ -678,6 +679,8 @@ p {
         // Update preview for media files
         if (['jpg', 'png', 'mp4'].includes(file.type)) {
             updateMediaPreview(file);
+        } else {
+            updatePreview();
         }
     }
     
